@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SDWebImageWebPCoder
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,7 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let webPCoder = SDImageWebPCoder.shared
+        SDImageCodersManager.shared.addCoder(webPCoder)
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enableDebugging = true
+        IQKeyboardManager.shared.keyboardDistanceFromTextField = 30.0
+        IQKeyboardManager.shared.resignOnTouchOutside = true
         return true
     }
 

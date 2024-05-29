@@ -74,7 +74,7 @@ final class NetworkManager {
     private func getPredictionResponse(for predictionGetIdPath: String, completion: @escaping (Result<RPGetManyResponse, Error>) -> Void) {
         let url = "https://api.replicate.com/v1/predictions/\(predictionGetIdPath)"
         let headers: HTTPHeaders = [
-            "Authorization": "Bearer r8_YktPIkymQdn7Usoj8fxhZeYA3xMPohP3D0XeA"
+            "Authorization": "Bearer r8_IEnBUfotf2i6a1zWsBAO9ii2B4vo6n63aWcK8"
         ]
         
         AF.request(url, method: .get, headers: headers).responseJSON { response in
@@ -103,7 +103,7 @@ final class NetworkManager {
         let url = "https://api.replicate.com/v1/predictions"
         let headers: HTTPHeaders = [
             "Content-Type": "application/json",
-            "Authorization": "Bearer r8_YktPIkymQdn7Usoj8fxhZeYA3xMPohP3D0XeA"
+            "Authorization": "Bearer r8_IEnBUfotf2i6a1zWsBAO9ii2B4vo6n63aWcK8"
         ]
         
         AF.request(url, method: .post, parameters: requestBody, encoder: JSONParameterEncoder.default, headers: headers).responseJSON { response in
@@ -127,74 +127,4 @@ final class NetworkManager {
             }
         }
     }
-//    func sendingPostrequest<T: Codable>(parameters: PostModel, handler: @escaping (_ restult: T) -> Void) {
-//        let url = "https://api.replicate.com/v1/predictions"
-//        let headers: HTTPHeaders = [
-//            "Content-Type": "application/json",
-//            "Authorization": "Bearer r8_YktPIkymQdn7Usoj8fxhZeYA3xMPohP3D0XeA"
-//        ]
-//        
-//        AF.request(url,method: .post,parameters: parameters,encoder: JSONParameterEncoder.default,headers: headers).responseJSON { response in
-//            switch response.result {
-//                
-//            case .success(let data):
-//                if let jsonData = try? JSONSerialization.data(withJSONObject: data) {
-//                    if let jsonDataString = String(data: jsonData, encoding: .utf8) {
-//                        print("JSON Data: \(jsonDataString)")
-//                    } else {
-//                        print("Failed to convert JSON data to string")
-//                    }
-//                    print("jsonData = \(jsonData)")
-//                    
-//                    do {
-//                        let decodedData = try JSONDecoder().decode(T.self, from: jsonData)
-//                        print("decodedData = \(decodedData)")
-//                    } catch {
-//                        print("Decoding error: \(error)")
-//                    }
-//                    
-//                } else {
-//                    print("Invalid JSON data")
-//                }
-//            case .failure(let error):
-//                print("Request failed with error: \(error)")
-//            }
-//        }
-//    }
-//    
-//    func sendingGetRequest<T: Codable>(id: String, handler: @escaping (_ restult: T) -> Void) {
-//        let url = "https://api.replicate.com/v1/predictions\(id)"
-//        let headers: HTTPHeaders = [
-//            "Authorization": "Bearer r8_YktPIkymQdn7Usoj8fxhZeYA3xMPohP3D0XeA"
-//        ]
-//        
-//        AF.request(url, method: .get, headers: headers).responseJSON { response in
-//            switch response.result {
-//                
-//            case .success(let data):
-//                if let jsonData = try? JSONSerialization.data(withJSONObject: data) {
-//                    if let jsonDataString = String(data: jsonData, encoding: .utf8) {
-//                        print("JSON Data: \(jsonDataString)")
-//                    } else {
-//                        print("Failed to convert JSON data to string")
-//                    }
-//                    print("jsonData = \(jsonData)")
-//                    
-//                    do {
-//                        let decodedData = try JSONDecoder().decode(T.self, from: jsonData)
-//                        print("decodedData = \(decodedData)")
-//                        handler(decodedData)
-//                    } catch {
-//                        print("Decoding error: \(error)")
-//                    }
-//                    
-//                } else {
-//                    print("Invalid JSON data")
-//                }
-//            case .failure(let error):
-//                print("Request failed with error: \(error)")
-//            }
-//        }
-//    }
-//    
 }

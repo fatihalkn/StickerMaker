@@ -20,6 +20,15 @@
 		3DC978972BFE33FC00CEBDA9 /* RPStickerMakerRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC978962BFE33FC00CEBDA9 /* RPStickerMakerRequestBody.swift */; };
 		3DC9789C2BFE401B00CEBDA9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9789B2BFE401B00CEBDA9 /* HomeView.swift */; };
 		3DC9789F2BFE78C500CEBDA9 /* NavigationBarExtantion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9789E2BFE78C500CEBDA9 /* NavigationBarExtantion.swift */; };
+		3DC978A12C0728AE00CEBDA9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC978A02C0728AE00CEBDA9 /* HomeViewModel.swift */; };
+		3DC978A42C07356100CEBDA9 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3DC978A32C07356100CEBDA9 /* SDWebImage */; };
+		3DC978A62C07356100CEBDA9 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3DC978A52C07356100CEBDA9 /* SDWebImageMapKit */; };
+		3DC978A92C07382000CEBDA9 /* SDWebImageWebPCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 3DC978A82C07382000CEBDA9 /* SDWebImageWebPCoder */; };
+		3DC978AC2C074A0C00CEBDA9 /* RandomStickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC978AB2C074A0C00CEBDA9 /* RandomStickerModel.swift */; };
+		3DC978AF2C0757B300CEBDA9 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3DC978AE2C0757B300CEBDA9 /* IQKeyboardManagerSwift */; };
+		3DC978B22C07660500CEBDA9 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 3DC978B12C07660500CEBDA9 /* ProgressHUD */; };
+		3DC978B42C07661900CEBDA9 /* ProgresHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC978B32C07661900CEBDA9 /* ProgresHud.swift */; };
+		3DC978B82C07AC1200CEBDA9 /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC978B72C07AC1200CEBDA9 /* Shake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +45,10 @@
 		3DC978962BFE33FC00CEBDA9 /* RPStickerMakerRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPStickerMakerRequestBody.swift; sourceTree = "<group>"; };
 		3DC9789B2BFE401B00CEBDA9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3DC9789E2BFE78C500CEBDA9 /* NavigationBarExtantion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarExtantion.swift; sourceTree = "<group>"; };
+		3DC978A02C0728AE00CEBDA9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		3DC978AB2C074A0C00CEBDA9 /* RandomStickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomStickerModel.swift; sourceTree = "<group>"; };
+		3DC978B32C07661900CEBDA9 /* ProgresHud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgresHud.swift; sourceTree = "<group>"; };
+		3DC978B72C07AC1200CEBDA9 /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,8 +56,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DC978A42C07356100CEBDA9 /* SDWebImage in Frameworks */,
+				3DC978B22C07660500CEBDA9 /* ProgressHUD in Frameworks */,
 				3DC9788E2BFE1AF300CEBDA9 /* Alamofire in Frameworks */,
+				3DC978A62C07356100CEBDA9 /* SDWebImageMapKit in Frameworks */,
+				3DC978A92C07382000CEBDA9 /* SDWebImageWebPCoder in Frameworks */,
 				3DC978902BFE1AF300CEBDA9 /* AlamofireDynamic in Frameworks */,
+				3DC978AF2C0757B300CEBDA9 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +88,7 @@
 		3DC9786D2BFE052F00CEBDA9 /* StickerMaker */ = {
 			isa = PBXGroup;
 			children = (
-				3DC9789D2BFE78AF00CEBDA9 /* Extansion */,
+				3DC9789D2BFE78AF00CEBDA9 /* Extantion+UIView */,
 				3DC978862BFE080800CEBDA9 /* Network */,
 				3DC978852BFE079B00CEBDA9 /* App */,
 				3DC978822BFE05CC00CEBDA9 /* Home */,
@@ -81,6 +99,7 @@
 		3DC978822BFE05CC00CEBDA9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3DC978AA2C0749F900CEBDA9 /* Model */,
 				3DC9789A2BFE3FFE00CEBDA9 /* View */,
 				3DC978992BFE3FE500CEBDA9 /* ViewModel */,
 				3DC978982BFE3FD600CEBDA9 /* Controller */,
@@ -138,6 +157,7 @@
 		3DC978992BFE3FE500CEBDA9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3DC978A02C0728AE00CEBDA9 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -150,12 +170,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		3DC9789D2BFE78AF00CEBDA9 /* Extansion */ = {
+		3DC9789D2BFE78AF00CEBDA9 /* Extantion+UIView */ = {
 			isa = PBXGroup;
 			children = (
 				3DC9789E2BFE78C500CEBDA9 /* NavigationBarExtantion.swift */,
+				3DC978B32C07661900CEBDA9 /* ProgresHud.swift */,
+				3DC978B72C07AC1200CEBDA9 /* Shake.swift */,
 			);
-			path = Extansion;
+			path = "Extantion+UIView";
+			sourceTree = "<group>";
+		};
+		3DC978AA2C0749F900CEBDA9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3DC978AB2C074A0C00CEBDA9 /* RandomStickerModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +207,11 @@
 			packageProductDependencies = (
 				3DC9788D2BFE1AF300CEBDA9 /* Alamofire */,
 				3DC9788F2BFE1AF300CEBDA9 /* AlamofireDynamic */,
+				3DC978A32C07356100CEBDA9 /* SDWebImage */,
+				3DC978A52C07356100CEBDA9 /* SDWebImageMapKit */,
+				3DC978A82C07382000CEBDA9 /* SDWebImageWebPCoder */,
+				3DC978AE2C0757B300CEBDA9 /* IQKeyboardManagerSwift */,
+				3DC978B12C07660500CEBDA9 /* ProgressHUD */,
 			);
 			productName = StickerMaker;
 			productReference = 3DC9786B2BFE052F00CEBDA9 /* StickerMaker.app */;
@@ -208,6 +243,10 @@
 			mainGroup = 3DC978622BFE052F00CEBDA9;
 			packageReferences = (
 				3DC9788C2BFE1AF300CEBDA9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				3DC978A22C07356100CEBDA9 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				3DC978A72C07381F00CEBDA9 /* XCRemoteSwiftPackageReference "SDWebImageWebPCoder" */,
+				3DC978AD2C0757B300CEBDA9 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				3DC978B02C07660500CEBDA9 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 			);
 			productRefGroup = 3DC9786C2BFE052F00CEBDA9 /* Products */;
 			projectDirPath = "";
@@ -238,11 +277,15 @@
 				3DC9789F2BFE78C500CEBDA9 /* NavigationBarExtantion.swift in Sources */,
 				3DC9788B2BFE1AAD00CEBDA9 /* NetworkManager.swift in Sources */,
 				3DC978932BFE1B7300CEBDA9 /* PostModel.swift in Sources */,
+				3DC978B82C07AC1200CEBDA9 /* Shake.swift in Sources */,
+				3DC978A12C0728AE00CEBDA9 /* HomeViewModel.swift in Sources */,
 				3DC9786F2BFE052F00CEBDA9 /* AppDelegate.swift in Sources */,
 				3DC978712BFE052F00CEBDA9 /* SceneDelegate.swift in Sources */,
 				3DC978972BFE33FC00CEBDA9 /* RPStickerMakerRequestBody.swift in Sources */,
 				3DC9789C2BFE401B00CEBDA9 /* HomeView.swift in Sources */,
+				3DC978AC2C074A0C00CEBDA9 /* RandomStickerModel.swift in Sources */,
 				3DC978952BFE1F0C00CEBDA9 /* GetModel.swift in Sources */,
+				3DC978B42C07661900CEBDA9 /* ProgresHud.swift in Sources */,
 				3DC978842BFE05FE00CEBDA9 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +509,38 @@
 				minimumVersion = 5.9.1;
 			};
 		};
+		3DC978A22C07356100CEBDA9 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.2;
+			};
+		};
+		3DC978A72C07381F00CEBDA9 /* XCRemoteSwiftPackageReference "SDWebImageWebPCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageWebPCoder";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.14.6;
+			};
+		};
+		3DC978AD2C0757B300CEBDA9 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.3;
+			};
+		};
+		3DC978B02C07660500CEBDA9 /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/relatedcode/ProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.1.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -478,6 +553,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3DC9788C2BFE1AF300CEBDA9 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = AlamofireDynamic;
+		};
+		3DC978A32C07356100CEBDA9 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DC978A22C07356100CEBDA9 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		3DC978A52C07356100CEBDA9 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DC978A22C07356100CEBDA9 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+		3DC978A82C07382000CEBDA9 /* SDWebImageWebPCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DC978A72C07381F00CEBDA9 /* XCRemoteSwiftPackageReference "SDWebImageWebPCoder" */;
+			productName = SDWebImageWebPCoder;
+		};
+		3DC978AE2C0757B300CEBDA9 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DC978AD2C0757B300CEBDA9 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		3DC978B12C07660500CEBDA9 /* ProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DC978B02C07660500CEBDA9 /* XCRemoteSwiftPackageReference "ProgressHUD" */;
+			productName = ProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

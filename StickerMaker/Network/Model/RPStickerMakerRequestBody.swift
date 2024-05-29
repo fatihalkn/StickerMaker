@@ -10,13 +10,13 @@ import Foundation
 // MARK: - RPStickerMakerRequestBody
 struct RPStickerMakerRequestBody: Codable {
     let version: String?
-    let input: RPStickerMakerInput?
+    var input: RPStickerMakerInput?
 }
 
 // MARK: - Input
 struct RPStickerMakerInput: Codable {
     let steps, width, height: Int?
-    let prompt, outputFormat: String?
+    var prompt, outputFormat: String?
     let outputQuality: Int?
     let negativePrompt: String?
     let numberOfImages: Int?
