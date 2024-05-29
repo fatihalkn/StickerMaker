@@ -74,7 +74,7 @@ final class NetworkManager {
     private func getPredictionResponse(for predictionGetIdPath: String, completion: @escaping (Result<RPGetManyResponse, Error>) -> Void) {
         let url = "https://api.replicate.com/v1/predictions/\(predictionGetIdPath)"
         let headers: HTTPHeaders = [
-            "Authorization": "Bearer r8_IEnBUfotf2i6a1zWsBAO9ii2B4vo6n63aWcK8"
+            "Authorization": "Bearer 1"
         ]
         
         AF.request(url, method: .get, headers: headers).responseJSON { response in
@@ -103,7 +103,7 @@ final class NetworkManager {
         let url = "https://api.replicate.com/v1/predictions"
         let headers: HTTPHeaders = [
             "Content-Type": "application/json",
-            "Authorization": "Bearer r8_IEnBUfotf2i6a1zWsBAO9ii2B4vo6n63aWcK8"
+            "Authorization": "Bearer 1"
         ]
         
         AF.request(url, method: .post, parameters: requestBody, encoder: JSONParameterEncoder.default, headers: headers).responseJSON { response in
