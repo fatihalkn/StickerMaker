@@ -33,7 +33,7 @@ extension HomeViewController {
         navigationController?.navigationBar.tintColor = .white
         self.navigationItem.title = "STCKR"
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: .questionMark, style: .done, target: nil, action: nil)
-        let proButton = UIBarButtonItem(image: UIImage(systemName: "star.square.fill"), style: .done, target: nil, action: nil)
+        let proButton = UIBarButtonItem(image: UIImage(systemName: "star.square.fill"), style: .done, target: self, action: #selector(proButtonTapped))
         let settignsButton = UIBarButtonItem(image: UIImage(systemName: "gear"), style: .done, target: self, action: #selector(settingsButtonTapped))
         self.navigationItem.rightBarButtonItems = [proButton, settignsButton]
         
@@ -45,6 +45,12 @@ extension HomeViewController {
     @objc func settingsButtonTapped() {
         let vc = SettingsViewController()
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func proButtonTapped() {
+        let vc = PayWallViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
 }
 

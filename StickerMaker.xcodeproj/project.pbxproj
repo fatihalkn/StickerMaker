@@ -12,6 +12,11 @@
 		3DB668B92C0EEB6E0040E037 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB668B82C0EEB6E0040E037 /* SettingsViewModel.swift */; };
 		3DB668BB2C0EEB980040E037 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB668BA2C0EEB980040E037 /* SettingsModel.swift */; };
 		3DB668BF2C0EEFDE0040E037 /* SettingsElementsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB668BE2C0EEFDE0040E037 /* SettingsElementsCell.swift */; };
+		3DB668C62C0F484A0040E037 /* PayWallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB668C52C0F484A0040E037 /* PayWallViewController.swift */; };
+		3DB668C82C0F48CA0040E037 /* PayWallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB668C72C0F48CA0040E037 /* PayWallView.swift */; };
+		3DB668CA2C0F4D510040E037 /* PremiumFeaturesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB668C92C0F4D510040E037 /* PremiumFeaturesCollectionViewCell.swift */; };
+		3DB668CC2C0F4EAD0040E037 /* PremiumFeaturesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB668CB2C0F4EAD0040E037 /* PremiumFeaturesModel.swift */; };
+		3DB668CE2C0F4EE90040E037 /* PayWallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB668CD2C0F4EE90040E037 /* PayWallViewModel.swift */; };
 		3DC9786F2BFE052F00CEBDA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9786E2BFE052F00CEBDA9 /* AppDelegate.swift */; };
 		3DC978712BFE052F00CEBDA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC978702BFE052F00CEBDA9 /* SceneDelegate.swift */; };
 		3DC978782BFE053100CEBDA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DC978772BFE053100CEBDA9 /* Assets.xcassets */; };
@@ -45,6 +50,11 @@
 		3DB668B82C0EEB6E0040E037 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		3DB668BA2C0EEB980040E037 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		3DB668BE2C0EEFDE0040E037 /* SettingsElementsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsElementsCell.swift; sourceTree = "<group>"; };
+		3DB668C52C0F484A0040E037 /* PayWallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallViewController.swift; sourceTree = "<group>"; };
+		3DB668C72C0F48CA0040E037 /* PayWallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallView.swift; sourceTree = "<group>"; };
+		3DB668C92C0F4D510040E037 /* PremiumFeaturesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumFeaturesCollectionViewCell.swift; sourceTree = "<group>"; };
+		3DB668CB2C0F4EAD0040E037 /* PremiumFeaturesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumFeaturesModel.swift; sourceTree = "<group>"; };
+		3DB668CD2C0F4EE90040E037 /* PayWallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallViewModel.swift; sourceTree = "<group>"; };
 		3DC9786B2BFE052F00CEBDA9 /* StickerMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StickerMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC9786E2BFE052F00CEBDA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DC978702BFE052F00CEBDA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +135,51 @@
 			isa = PBXGroup;
 			children = (
 				3DB668B42C0EEB060040E037 /* SettingsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3DB668C02C0F48080040E037 /* Paywall */ = {
+			isa = PBXGroup;
+			children = (
+				3DB668C42C0F48360040E037 /* Controller */,
+				3DB668C32C0F48250040E037 /* Model */,
+				3DB668C22C0F481D0040E037 /* ViewModel */,
+				3DB668C12C0F48100040E037 /* View */,
+			);
+			path = Paywall;
+			sourceTree = "<group>";
+		};
+		3DB668C12C0F48100040E037 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3DB668C72C0F48CA0040E037 /* PayWallView.swift */,
+				3DB668C92C0F4D510040E037 /* PremiumFeaturesCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DB668C22C0F481D0040E037 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3DB668CD2C0F4EE90040E037 /* PayWallViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3DB668C32C0F48250040E037 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3DB668CB2C0F4EAD0040E037 /* PremiumFeaturesModel.swift */,
+			);
+			name = Model;
+			path = ViewModel/Model;
+			sourceTree = "<group>";
+		};
+		3DB668C42C0F48360040E037 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3DB668C52C0F484A0040E037 /* PayWallViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -252,6 +307,7 @@
 		3DC978BE2C0DE09100CEBDA9 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3DB668C02C0F48080040E037 /* Paywall */,
 				3DB668AF2C0EEACC0040E037 /* Settings */,
 				3DC978BF2C0DE0AE00CEBDA9 /* GenerateResultPage */,
 				3DC978822BFE05CC00CEBDA9 /* Home */,
@@ -390,6 +446,7 @@
 				3DC9788B2BFE1AAD00CEBDA9 /* NetworkManager.swift in Sources */,
 				3DC978C92C0DFD3600CEBDA9 /* GenerateResultPageViewModel.swift in Sources */,
 				3DC978932BFE1B7300CEBDA9 /* PostModel.swift in Sources */,
+				3DB668C62C0F484A0040E037 /* PayWallViewController.swift in Sources */,
 				3DC978B82C07AC1200CEBDA9 /* Shake.swift in Sources */,
 				3DC978A12C0728AE00CEBDA9 /* HomeViewModel.swift in Sources */,
 				3DC978BD2C0DDC6700CEBDA9 /* SupriseMeModel.swift in Sources */,
@@ -402,11 +459,15 @@
 				3DB668BF2C0EEFDE0040E037 /* SettingsElementsCell.swift in Sources */,
 				3DC978AC2C074A0C00CEBDA9 /* RandomStickerModel.swift in Sources */,
 				3DC978952BFE1F0C00CEBDA9 /* GetModel.swift in Sources */,
+				3DB668C82C0F48CA0040E037 /* PayWallView.swift in Sources */,
 				3DC978C52C0DE12500CEBDA9 /* GenerateResultPage.swift in Sources */,
+				3DB668CE2C0F4EE90040E037 /* PayWallViewModel.swift in Sources */,
 				3DB668B92C0EEB6E0040E037 /* SettingsViewModel.swift in Sources */,
 				3DC978B42C07661900CEBDA9 /* ProgresHud.swift in Sources */,
 				3DC978842BFE05FE00CEBDA9 /* HomeViewController.swift in Sources */,
 				3DB668B52C0EEB060040E037 /* SettingsViewController.swift in Sources */,
+				3DB668CA2C0F4D510040E037 /* PremiumFeaturesCollectionViewCell.swift in Sources */,
+				3DB668CC2C0F4EAD0040E037 /* PremiumFeaturesModel.swift in Sources */,
 				3DB668B72C0EEB480040E037 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
