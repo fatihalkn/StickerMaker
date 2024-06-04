@@ -79,7 +79,7 @@ final class HomeView: UIView {
     
     lazy var supriseMeButton: UIButton = {
         let button = UIButton()
-        let attributedTitle = NSAttributedString(string: "Suprise Me✨",attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue,
+        let attributedTitle = NSAttributedString(string: "Suprise Me",attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue,
             .font: UIFont.systemFont(ofSize: 20)])
         button.setAttributedTitle(attributedTitle, for: .normal)
         button.backgroundColor = .clear
@@ -317,7 +317,8 @@ private extension HomeView {
             createButton.topAnchor.constraint(equalTo: promptText.bottomAnchor, constant: 5),
             createButton.leadingAnchor.constraint(equalTo: mainCreateView.safeAreaLayoutGuide.leadingAnchor,constant: 20),
             createButton.trailingAnchor.constraint(equalTo: mainCreateView.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            createButton.bottomAnchor.constraint(equalTo: mainCreateView.safeAreaLayoutGuide.bottomAnchor, constant: -10)
+            createButton.bottomAnchor.constraint(equalTo: mainCreateView.safeAreaLayoutGuide.bottomAnchor, constant: -10),
+            createButton.heightAnchor.constraint(equalToConstant: 50)
             
         ])
     }

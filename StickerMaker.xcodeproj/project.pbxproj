@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DB668B52C0EEB060040E037 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB668B42C0EEB060040E037 /* SettingsViewController.swift */; };
+		3DB668B72C0EEB480040E037 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB668B62C0EEB480040E037 /* SettingsView.swift */; };
+		3DB668B92C0EEB6E0040E037 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB668B82C0EEB6E0040E037 /* SettingsViewModel.swift */; };
+		3DB668BB2C0EEB980040E037 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB668BA2C0EEB980040E037 /* SettingsModel.swift */; };
+		3DB668BF2C0EEFDE0040E037 /* SettingsElementsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB668BE2C0EEFDE0040E037 /* SettingsElementsCell.swift */; };
 		3DC9786F2BFE052F00CEBDA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9786E2BFE052F00CEBDA9 /* AppDelegate.swift */; };
 		3DC978712BFE052F00CEBDA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC978702BFE052F00CEBDA9 /* SceneDelegate.swift */; };
 		3DC978782BFE053100CEBDA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DC978772BFE053100CEBDA9 /* Assets.xcassets */; };
@@ -35,6 +40,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3DB668B42C0EEB060040E037 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		3DB668B62C0EEB480040E037 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3DB668B82C0EEB6E0040E037 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		3DB668BA2C0EEB980040E037 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		3DB668BE2C0EEFDE0040E037 /* SettingsElementsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsElementsCell.swift; sourceTree = "<group>"; };
 		3DC9786B2BFE052F00CEBDA9 /* StickerMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StickerMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC9786E2BFE052F00CEBDA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DC978702BFE052F00CEBDA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +85,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DB668AF2C0EEACC0040E037 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3DB668B32C0EEAF20040E037 /* Controller */,
+				3DB668B22C0EEAEC0040E037 /* Model */,
+				3DB668B12C0EEAE20040E037 /* ViewModel */,
+				3DB668B02C0EEADB0040E037 /* View */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		3DB668B02C0EEADB0040E037 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3DB668B62C0EEB480040E037 /* SettingsView.swift */,
+				3DB668BE2C0EEFDE0040E037 /* SettingsElementsCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DB668B12C0EEAE20040E037 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3DB668B82C0EEB6E0040E037 /* SettingsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3DB668B22C0EEAEC0040E037 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3DB668BA2C0EEB980040E037 /* SettingsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3DB668B32C0EEAF20040E037 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3DB668B42C0EEB060040E037 /* SettingsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		3DC978622BFE052F00CEBDA9 = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +252,7 @@
 		3DC978BE2C0DE09100CEBDA9 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3DB668AF2C0EEACC0040E037 /* Settings */,
 				3DC978BF2C0DE0AE00CEBDA9 /* GenerateResultPage */,
 				3DC978822BFE05CC00CEBDA9 /* Home */,
 			);
@@ -343,11 +398,16 @@
 				3DC978C72C0DE1A700CEBDA9 /* GenerateResultView.swift in Sources */,
 				3DC978972BFE33FC00CEBDA9 /* RPStickerMakerRequestBody.swift in Sources */,
 				3DC9789C2BFE401B00CEBDA9 /* HomeView.swift in Sources */,
+				3DB668BB2C0EEB980040E037 /* SettingsModel.swift in Sources */,
+				3DB668BF2C0EEFDE0040E037 /* SettingsElementsCell.swift in Sources */,
 				3DC978AC2C074A0C00CEBDA9 /* RandomStickerModel.swift in Sources */,
 				3DC978952BFE1F0C00CEBDA9 /* GetModel.swift in Sources */,
 				3DC978C52C0DE12500CEBDA9 /* GenerateResultPage.swift in Sources */,
+				3DB668B92C0EEB6E0040E037 /* SettingsViewModel.swift in Sources */,
 				3DC978B42C07661900CEBDA9 /* ProgresHud.swift in Sources */,
 				3DC978842BFE05FE00CEBDA9 /* HomeViewController.swift in Sources */,
+				3DB668B52C0EEB060040E037 /* SettingsViewController.swift in Sources */,
+				3DB668B72C0EEB480040E037 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

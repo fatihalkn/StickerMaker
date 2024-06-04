@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SDImageCodersManager.shared.addCoder(webPCoder)
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableDebugging = true
-        IQKeyboardManager.shared.keyboardDistanceFromTextField = 30.0
+        IQKeyboardManager.shared.keyboardDistanceFromTextField = 65.0
         IQKeyboardManager.shared.resignOnTouchOutside = true
         return true
     }
