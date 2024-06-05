@@ -25,11 +25,11 @@ class HomeViewModel {
                                                     .init(stickerImage: "5")]
                                                     
     
-    var supriseMeModel: [SupriseMeModel] = [.init(prompt: "a cute cat"),
-                                            .init(prompt: "an angry penguin"),
-                                            .init(prompt: "pikachu, simple, clean"),
-                                            .init(prompt: "cute dragon"),
-                                            .init(prompt: "a toxic yellow smiley face, X eyes")]
+    var supriseMeModel: [SupriseMeModel] = [.init(prompt: "A cute cat"),
+                                            .init(prompt: "An angry penguin"),
+                                            .init(prompt: "Pikachu, simple, clean"),
+                                            .init(prompt: "Cute dragon"),
+                                            .init(prompt: "A toxic yellow smiley face, X eyes")]
     
     func getStickerPhoto(completion: @escaping (RPGetManyResponse) -> Void) {
         NetworkManager.shared.getPredictionManyImage(requestBody: rpStickerMakerRequestBodyModel) { result in

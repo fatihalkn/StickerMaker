@@ -11,6 +11,7 @@ import UIKit
 protocol SettingsViewProtocol {
     func clickedShareApp()
     func clickedSendFeedBack()
+    func clickedSTCKRPro()
 }
 
 class SettingsView: UIView {
@@ -50,7 +51,7 @@ extension SettingsView: UITableViewDelegate, UITableViewDataSource {
     func configure() {
         settingsViewModel.settingsData.append(Sections(title: "PREMİUM", settigns: [
             .init(title: "STCKR PRO", image: .stckr, iconBackRoundColor: .darkGray, handler: {
-                //PAYWALL AÇTIR
+                self.delegate?.clickedSTCKRPro()
             }),
             .init(title: "Restore Purchases", image: .restore, iconBackRoundColor: .systemBlue, handler: {
                 let websiteURL = URL(string: "https://github.com/fatihalkn")
