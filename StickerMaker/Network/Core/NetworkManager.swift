@@ -75,6 +75,7 @@ final class NetworkManager {
         let url = "https://api.replicate.com/v1/predictions/\(predictionGetIdPath)"
         let headers: HTTPHeaders = [
             "Authorization": "Bearer #YOUR_API_KEY#"
+            
         ]
         
         AF.request(url, method: .get, headers: headers).responseJSON { response in
