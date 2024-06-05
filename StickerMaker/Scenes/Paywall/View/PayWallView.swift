@@ -33,6 +33,7 @@ class PayWallView: UIView {
         button.setTitle("Restore", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .darkGray
+        button.titleLabel?.font = .systemFont(ofSize: 15, weight: .medium)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -103,6 +104,7 @@ class PayWallView: UIView {
         collectionView.backgroundColor = .clear
         collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.isScrollEnabled = false
         return collectionView
     }()
     
@@ -227,7 +229,7 @@ extension PayWallView {
             restoreButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
             restoreButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor,constant: -15),
             restoreButton.widthAnchor.constraint(equalToConstant: 70),
-            restoreButton.heightAnchor.constraint(equalToConstant: 40),
+            restoreButton.heightAnchor.constraint(equalToConstant: 35),
             
             payWallImage.topAnchor.constraint(equalTo: restoreButton.bottomAnchor, constant: 10),
             payWallImage.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor,constant: 20),
@@ -255,7 +257,7 @@ extension PayWallView {
             
             pricingLabel.topAnchor.constraint(equalTo: payWallCollectionView.bottomAnchor),
             pricingLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor,constant: 15),
-            pricingLabel.trailingAnchor.constraint(lessThanOrEqualTo:safeAreaLayoutGuide.trailingAnchor,constant: -50),
+            pricingLabel.trailingAnchor.constraint(lessThanOrEqualTo:safeAreaLayoutGuide.trailingAnchor),
             pricingLabel.heightAnchor.constraint(lessThanOrEqualToConstant: 150),
             
             contiuneButton.topAnchor.constraint(equalTo: pricingLabel.bottomAnchor, constant: 10),
@@ -321,5 +323,7 @@ extension PayWallView: UICollectionViewDelegate, UICollectionViewDataSource, UIC
         let cellHeight: CGFloat = 30
         return .init(width: cellWidth, height: cellHeight)
     }
+    
+
     
 }

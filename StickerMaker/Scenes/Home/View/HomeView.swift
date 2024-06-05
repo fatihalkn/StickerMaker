@@ -22,6 +22,7 @@ final class HomeView: UIView {
     var timer: Timer?
     var fastTimer: Timer?
     var delegate: HomeViewProtocol?
+    var isTimerStarted = false
     
     //MARK: - UI Elements
     lazy var mainCreateView: UIView = {
@@ -70,7 +71,7 @@ final class HomeView: UIView {
         textField.placeholder = "Write Something"
         textField.backgroundColor = .textField
         textField.layer.borderColor = UIColor.black.cgColor
-        textField.layer.borderWidth = 0.8
+        textField.layer.borderWidth = 0.2
         textField.font = .systemFont(ofSize: 12, weight: .bold)
         textField.textColor = .black
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -94,6 +95,15 @@ final class HomeView: UIView {
         indicator.translatesAutoresizingMaskIntoConstraints = false
         indicator.color = .red
         return indicator
+    }()
+    
+    lazy var supriseMeImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.backgroundColor = .clear
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = .supriseMe
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
     }()
     
     //MARK: - Init Methods
@@ -129,8 +139,10 @@ final class HomeView: UIView {
     }
     
     
+    
     func startTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 0.6, target: self, selector: #selector(changeImage), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.2, target: self, selector: #selector(changeImage), userInfo: nil, repeats: true)
+        isTimerStarted = true
     }
     
     func loadingTimer() {
@@ -145,6 +157,7 @@ final class HomeView: UIView {
     func stopTimer() {
         timer?.invalidate()
         timer = nil
+        isTimerStarted = false
     }
     
     @objc func changeImage() {
@@ -181,11 +194,13 @@ final class HomeView: UIView {
 //MARK: - TextFieldDelegate
 extension HomeView: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if let newText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string), newText.isEmpty {
-            startTimer()
+        if let newText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string), 
+            newText.isEmpty {
+            if !isTimerStarted {
+                startTimer()
+            }
             self.dibbingView.backgroundColor = .white
         }
-        
         return true
     }
 }
@@ -251,13 +266,13 @@ private extension HomeView {
 private extension HomeView {
     
     func setupRadius() {
-        mainCreateView.layer.cornerRadius = 12
+        mainCreateView.layer.cornerRadius = 8
         mainCreateView.layer.masksToBounds = true
         
-        promptText.layer.cornerRadius = 12
+        promptText.layer.cornerRadius = 8
         promptText.layer.masksToBounds = true
         
-        createButton.layer.cornerRadius = 12
+        createButton.layer.cornerRadius = 8
         createButton.layer.masksToBounds  = true
         
         randomStickerImageView.layer.cornerRadius = randomStickerImageView.frame.height / 2
@@ -277,6 +292,7 @@ private extension HomeView {
         mainCreateView.addSubview(promptText)
         mainCreateView.addSubview(createButton)
         mainCreateView.addSubview(createButton)
+        mainCreateView.addSubview(supriseMeImageView)
         
         NSLayoutConstraint.activate([
             randomStickerImageView.centerYAnchor.constraint(equalTo: creatingView.centerYAnchor),
@@ -308,6 +324,13 @@ private extension HomeView {
             
             supriseMeButton.centerXAnchor.constraint(equalTo: mainCreateView.centerXAnchor),
             supriseMeButton.topAnchor.constraint(equalTo: mainCreateView.safeAreaLayoutGuide.topAnchor,constant: 10),
+            
+            supriseMeImageView.centerYAnchor.constraint(equalTo: supriseMeButton.centerYAnchor),
+            supriseMeImageView.leadingAnchor.constraint(equalTo: supriseMeButton.trailingAnchor,constant: 10),
+            supriseMeImageView.heightAnchor.constraint(equalToConstant: 25),
+            supriseMeImageView.widthAnchor.constraint(equalToConstant: 25),
+            
+            
             
             promptText.topAnchor.constraint(equalTo: supriseMeButton.bottomAnchor,constant: 10),
             promptText.leadingAnchor.constraint(equalTo: mainCreateView.safeAreaLayoutGuide.leadingAnchor,constant: 20),

@@ -72,7 +72,7 @@ final class GenerateResultView: UIView {
     lazy var shareButton: UIButton = {
         let button = UIButton()
         button.setTitle("Share", for: .normal)
-        button.setTitleColor(.mainCreateView, for: .normal)
+        button.setTitleColor(.darkGray, for: .normal)
         button.backgroundColor = .clear
         button.translatesAutoresizingMaskIntoConstraints = false
         return button

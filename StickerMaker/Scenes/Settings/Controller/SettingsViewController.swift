@@ -69,6 +69,12 @@ extension SettingsViewController: MFMailComposeViewControllerDelegate {
 
 //MARK: - SettingsViewProtocol
 extension SettingsViewController: SettingsViewProtocol {
+    func clickedSTCKRPro() {
+        let vc = PayWallViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated:  true)
+    }
+    
     func clickedSendFeedBack() {
         self.showMailCompser(emailSubject, emailBody, toEmails, fromEmail, images)
     }

@@ -17,6 +17,11 @@
 		3DB668CA2C0F4D510040E037 /* PremiumFeaturesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB668C92C0F4D510040E037 /* PremiumFeaturesCollectionViewCell.swift */; };
 		3DB668CC2C0F4EAD0040E037 /* PremiumFeaturesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB668CB2C0F4EAD0040E037 /* PremiumFeaturesModel.swift */; };
 		3DB668CE2C0F4EE90040E037 /* PayWallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB668CD2C0F4EE90040E037 /* PayWallViewModel.swift */; };
+		3DB668D52C10719C0040E037 /* DirectoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB668D42C10719C0040E037 /* DirectoryViewController.swift */; };
+		3DB668D72C1071DE0040E037 /* DirectoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB668D62C1071DE0040E037 /* DirectoryView.swift */; };
+		3DB668D92C1072630040E037 /* DirectoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB668D82C1072630040E037 /* DirectoryViewModel.swift */; };
+		3DB668DB2C1073BA0040E037 /* DirectoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB668DA2C1073BA0040E037 /* DirectoryTableViewCell.swift */; };
+		3DB668DD2C1076E20040E037 /* DirectoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB668DC2C1076E20040E037 /* DirectoryModel.swift */; };
 		3DC9786F2BFE052F00CEBDA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9786E2BFE052F00CEBDA9 /* AppDelegate.swift */; };
 		3DC978712BFE052F00CEBDA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC978702BFE052F00CEBDA9 /* SceneDelegate.swift */; };
 		3DC978782BFE053100CEBDA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DC978772BFE053100CEBDA9 /* Assets.xcassets */; };
@@ -55,6 +60,11 @@
 		3DB668C92C0F4D510040E037 /* PremiumFeaturesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumFeaturesCollectionViewCell.swift; sourceTree = "<group>"; };
 		3DB668CB2C0F4EAD0040E037 /* PremiumFeaturesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumFeaturesModel.swift; sourceTree = "<group>"; };
 		3DB668CD2C0F4EE90040E037 /* PayWallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallViewModel.swift; sourceTree = "<group>"; };
+		3DB668D42C10719C0040E037 /* DirectoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryViewController.swift; sourceTree = "<group>"; };
+		3DB668D62C1071DE0040E037 /* DirectoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryView.swift; sourceTree = "<group>"; };
+		3DB668D82C1072630040E037 /* DirectoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryViewModel.swift; sourceTree = "<group>"; };
+		3DB668DA2C1073BA0040E037 /* DirectoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryTableViewCell.swift; sourceTree = "<group>"; };
+		3DB668DC2C1076E20040E037 /* DirectoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryModel.swift; sourceTree = "<group>"; };
 		3DC9786B2BFE052F00CEBDA9 /* StickerMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StickerMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC9786E2BFE052F00CEBDA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DC978702BFE052F00CEBDA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +194,50 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		3DB668CF2C10705F0040E037 /* Directory */ = {
+			isa = PBXGroup;
+			children = (
+				3DB668D32C10717D0040E037 /* Model */,
+				3DB668D22C1071770040E037 /* Controller */,
+				3DB668D12C1071710040E037 /* ViewModel */,
+				3DB668D02C10716C0040E037 /* View */,
+			);
+			path = Directory;
+			sourceTree = "<group>";
+		};
+		3DB668D02C10716C0040E037 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3DB668D62C1071DE0040E037 /* DirectoryView.swift */,
+				3DB668DA2C1073BA0040E037 /* DirectoryTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DB668D12C1071710040E037 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3DB668D82C1072630040E037 /* DirectoryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3DB668D22C1071770040E037 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3DB668D42C10719C0040E037 /* DirectoryViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3DB668D32C10717D0040E037 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3DB668DC2C1076E20040E037 /* DirectoryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3DC978622BFE052F00CEBDA9 = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +361,7 @@
 		3DC978BE2C0DE09100CEBDA9 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3DB668CF2C10705F0040E037 /* Directory */,
 				3DB668C02C0F48080040E037 /* Paywall */,
 				3DB668AF2C0EEACC0040E037 /* Settings */,
 				3DC978BF2C0DE0AE00CEBDA9 /* GenerateResultPage */,
@@ -442,6 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DB668D72C1071DE0040E037 /* DirectoryView.swift in Sources */,
 				3DC9789F2BFE78C500CEBDA9 /* NavigationBarExtantion.swift in Sources */,
 				3DC9788B2BFE1AAD00CEBDA9 /* NetworkManager.swift in Sources */,
 				3DC978C92C0DFD3600CEBDA9 /* GenerateResultPageViewModel.swift in Sources */,
@@ -459,13 +515,17 @@
 				3DB668BF2C0EEFDE0040E037 /* SettingsElementsCell.swift in Sources */,
 				3DC978AC2C074A0C00CEBDA9 /* RandomStickerModel.swift in Sources */,
 				3DC978952BFE1F0C00CEBDA9 /* GetModel.swift in Sources */,
+				3DB668D92C1072630040E037 /* DirectoryViewModel.swift in Sources */,
 				3DB668C82C0F48CA0040E037 /* PayWallView.swift in Sources */,
 				3DC978C52C0DE12500CEBDA9 /* GenerateResultPage.swift in Sources */,
+				3DB668DD2C1076E20040E037 /* DirectoryModel.swift in Sources */,
 				3DB668CE2C0F4EE90040E037 /* PayWallViewModel.swift in Sources */,
 				3DB668B92C0EEB6E0040E037 /* SettingsViewModel.swift in Sources */,
 				3DC978B42C07661900CEBDA9 /* ProgresHud.swift in Sources */,
+				3DB668DB2C1073BA0040E037 /* DirectoryTableViewCell.swift in Sources */,
 				3DC978842BFE05FE00CEBDA9 /* HomeViewController.swift in Sources */,
 				3DB668B52C0EEB060040E037 /* SettingsViewController.swift in Sources */,
+				3DB668D52C10719C0040E037 /* DirectoryViewController.swift in Sources */,
 				3DB668CA2C0F4D510040E037 /* PremiumFeaturesCollectionViewCell.swift in Sources */,
 				3DB668CC2C0F4EAD0040E037 /* PremiumFeaturesModel.swift in Sources */,
 				3DB668B72C0EEB480040E037 /* SettingsView.swift in Sources */,

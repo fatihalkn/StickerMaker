@@ -30,11 +30,11 @@ class HomeViewController: UIViewController {
 extension HomeViewController {
     func setupNavigationBar() {
         makeOpaqueNavBar(backgroundColor: .mainCreateView)
-        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.tintColor = .black
         self.navigationItem.title = "STCKR"
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: .questionMark, style: .done, target: nil, action: nil)
-        let proButton = UIBarButtonItem(image: UIImage(systemName: "star.square.fill"), style: .done, target: self, action: #selector(proButtonTapped))
-        let settignsButton = UIBarButtonItem(image: UIImage(systemName: "gear"), style: .done, target: self, action: #selector(settingsButtonTapped))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: .questionMark, style: .done, target: self, action: #selector(questionMarkButtonTapped))
+        let proButton = UIBarButtonItem(image: .pro, style: .done, target: self, action: #selector(proButtonTapped))
+        let settignsButton = UIBarButtonItem(image: .settings, style: .done, target: self, action: #selector(settingsButtonTapped))
         self.navigationItem.rightBarButtonItems = [proButton, settignsButton]
         
     }
@@ -50,6 +50,15 @@ extension HomeViewController {
     @objc func proButtonTapped() {
         let vc = PayWallViewController()
         vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
+    
+    @objc func questionMarkButtonTapped() {
+        let vc = DirectoryViewController()
+        if let sheet = vc.sheetPresentationController {
+            sheet.detents = [.medium(),.large()]
+            sheet.prefersGrabberVisible = true
+        }
         present(vc, animated: true)
     }
 }
